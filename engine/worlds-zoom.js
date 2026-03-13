@@ -3,7 +3,7 @@
 
 
   function universeCard(u) {
-    const c = u.color;
+  const totalEntries = (u.books || []).reduce((n,b)=>n+(b||[]).length,0);  const c = u.color;
     const bookCount = (u.books||[]).length;
     const hoverOn  = u.locked ? '' : "this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px "+c+"25';this.style.borderColor='"+c+"55';";
     const hoverOff = u.locked ? '' : "this.style.transform='';this.style.boxShadow='0 0 30px "+c+"0f';this.style.borderColor='"+c+"33';";
