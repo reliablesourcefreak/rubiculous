@@ -1,0 +1,26 @@
+{
+  "pass": 8,
+  "name": "shared_ui_helpers_extraction",
+  "created_files": [
+    "engine/ui-helpers.js"
+  ],
+  "updated_files": [
+    "engine/app.js",
+    "index.html"
+  ],
+  "moved_functions": [
+    "getWorldColor",
+    "setTheme",
+    "closeMobileNav",
+    "typewriter"
+  ],
+  "app_js_remaining_named_functions": 1,
+  "remaining_functions": [
+    "init"
+  ],
+  "notes": [
+    "Extended existing non-module script architecture by adding a global helper kernel.",
+    "Did not change auth, editor, registry, gallery, radio, or worlds responsibilities.",
+    "Did not perform a live browser smoke test in this environment."
+  ]
+}

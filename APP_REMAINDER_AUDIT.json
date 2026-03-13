@@ -1,0 +1,16 @@
+{
+  "source_zip": "rubiculous_targeted_surgery_4_complete.zip",
+  "app_functions_before": 63,
+  "app_functions_after": 62,
+  "moved_in_minimization": {
+    "characters.js": [
+      "renderRegistryCharacters"
+    ]
+  },
+  "next_recommended_targets": [
+    "home/navigation shell",
+    "registry/informatics",
+    "radio render helpers",
+    "cross-cutting shared UI helpers"
+  ]
+}

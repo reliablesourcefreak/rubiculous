@@ -1,0 +1,19 @@
+{
+  "pass": "worlds_zoom_extraction",
+  "created": [
+    "engine/worlds-zoom.js"
+  ],
+  "updated": [
+    "engine/app.js",
+    "index.html"
+  ],
+  "moved_functions": [
+    "showZoom",
+    "universeCard",
+    "renderZoomUniverses",
+    "renderZoomExNihilo"
+  ],
+  "remaining_named_functions_app_js_top_level": 9,
+  "remaining_named_functions_app_js_all_decl_lines": 9,
+  "note": "bookCard was already provided by engine/worlds-controller.js and was not moved in this pass."
+}

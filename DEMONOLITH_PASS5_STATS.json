@@ -1,0 +1,18 @@
+{
+  "remaining_named_functions_in_app_js": 13,
+  "remaining_names": [
+    "getWorldColor",
+    "showZoom",
+    "renderZoomUniverses",
+    "universeCard",
+    "renderZoomExNihilo",
+    "renderAdminList",
+    "showEditor",
+    "editPost",
+    "closeEditor",
+    "setTheme",
+    "closeMobileNav",
+    "init",
+    "typewriter"
+  ]
+}

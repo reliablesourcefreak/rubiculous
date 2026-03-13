@@ -1,0 +1,22 @@
+{
+  "persistence.js": {
+    "returncode": 0,
+    "stderr": ""
+  },
+  "world.js": {
+    "returncode": 0,
+    "stderr": ""
+  },
+  "characters.js": {
+    "returncode": 0,
+    "stderr": ""
+  },
+  "search.js": {
+    "returncode": 0,
+    "stderr": ""
+  },
+  "app.js": {
+    "returncode": 0,
+    "stderr": ""
+  }
+}

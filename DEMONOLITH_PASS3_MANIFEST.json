@@ -1,0 +1,31 @@
+{
+  "pass": "registry_informatics_extraction",
+  "source_zip": "rubiculous_home_nav_extracted.zip",
+  "modules_created": [
+    "engine/registry.js",
+    "engine/registry-links.js"
+  ],
+  "functions_moved": [
+    "loadPosts",
+    "savePosts",
+    "loadGallery",
+    "renderPostGrid",
+    "renderGalleryPreview",
+    "saveRegistry",
+    "renderRegistryWorlds",
+    "renderRegistryTimeline",
+    "loadLinks",
+    "saveLinks",
+    "addLink",
+    "removeLink",
+    "getLinks",
+    "openLinkModal",
+    "closeLinkModal",
+    "renderLinkModal",
+    "filterLinkCandidates",
+    "linkAndRefresh",
+    "removeLinkAndRefresh",
+    "renderLinkedPanel"
+  ],
+  "app_js_remaining_named_functions": 38
+}

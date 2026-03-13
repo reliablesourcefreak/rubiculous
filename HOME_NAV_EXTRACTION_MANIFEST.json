@@ -1,0 +1,15 @@
+{
+  "source_zip": "rubiculous_remainder_audit_and_minimized.zip",
+  "pass": "home_navigation_extraction",
+  "moved": {
+    "navigation.js": [
+      "navigate",
+      "toggleThemeMenu",
+      "toggleMobileNav"
+    ],
+    "home.js": [
+      "renderHome"
+    ]
+  },
+  "remaining_named_functions_in_app_js": 58
+}

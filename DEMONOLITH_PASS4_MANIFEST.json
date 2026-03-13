@@ -1,0 +1,30 @@
+{
+  "source_zip": "rubiculous_registry_extracted.zip",
+  "pass": "radio_extraction",
+  "created": [
+    "engine/radio.js"
+  ],
+  "updated": [
+    "engine/app.js",
+    "index.html"
+  ],
+  "moved_functions": [
+    "renderRadio",
+    "initAudio",
+    "stopAll",
+    "noteFreq",
+    "playTone",
+    "playNoise",
+    "scheduleLofi",
+    "scheduleAmbient",
+    "scheduleJazz",
+    "scheduleSynth",
+    "scheduleChillhop",
+    "startStation",
+    "drawViz",
+    "animateBars",
+    "updateDisplay",
+    "initRadio"
+  ],
+  "remaining_named_functions_in_app_js": 22
+}

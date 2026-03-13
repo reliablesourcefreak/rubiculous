@@ -1,0 +1,15 @@
+{
+  "pass": 2,
+  "name": "de-monolith pass 2",
+  "source_zip": "rubiculous_demonolith_pass1.zip",
+  "moved_functions": {
+    "content-controller.js": [
+      "renderInformatics"
+    ]
+  },
+  "files_updated": [
+    "engine/app.js",
+    "engine/content-controller.js"
+  ],
+  "note": "Real function bodies were extracted from app.js into existing controller kernels where found."
+}
