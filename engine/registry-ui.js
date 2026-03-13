@@ -107,3 +107,5 @@ function closeProfile() {
   window.openProfile = openProfile;
   window.closeProfile = closeProfile;
 })();
+
+Rubiculous.register("informatics", renderInformatics);

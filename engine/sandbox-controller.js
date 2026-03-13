@@ -308,3 +308,5 @@ function sbClear() {
   sbPins = []; sbConnections = [];
   sbSaveState(); sbRenderBoard(); sbRenderConnections();
 }
+
+Rubiculous.register("sandbox:publish", sbPublishTransmission);

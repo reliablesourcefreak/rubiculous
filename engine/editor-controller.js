@@ -159,3 +159,5 @@ function closeEditor() {
   document.getElementById('admin-dashboard').style.display = 'block';
   editingId = null;
 }
+
+Rubiculous.register("admin", renderAdmin);

@@ -322,3 +322,5 @@ function initRadio() {
   }
 
 }
+
+Rubiculous.register("radio", initRadio);

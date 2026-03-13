@@ -31,3 +31,4 @@ function renderHome() {
 
   renderRadio();
 }
+Rubiculous.register("home", renderHome);

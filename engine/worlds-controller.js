@@ -470,3 +470,5 @@ function renderWorldsLive() {
     </div>`;
   }).join('');
 }
+
+Rubiculous.register("worlds", renderWorlds);

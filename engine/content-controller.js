@@ -232,3 +232,9 @@ function renderArchiveDossier(pub) {
       </div>
     </div>`).join('');
 }
+
+Rubiculous.register("archive", renderArchive);
+
+Rubiculous.register("gallery", renderGallery);
+
+Rubiculous.register("article", renderArticle);
