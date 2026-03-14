@@ -107,3 +107,16 @@ Born from suffering with Claude HTML dumps and rate limits.
 
 ## FIRST MESSAGE AFTER DROPPING THIS FILE
 > "I've read the bootstrap. What do you want to work on today?"
+
+## THE iOS ANALOGY — technical proof this architecture scales
+
+Apple independently proved the same pattern at billion-user scale.
+
+| Rubiculous | iOS / App Store |
+|---|---|
+| Core-4 | iOS kernel (touch, render, storage, display primitives) |
+| Orbits | App Store apps (2M+ apps, infinite growth) |
+| Resistance in orbits | Instagram bugs never crash iOS |
+| Core stays minimal | iOS never bloats from 2M apps |
+
+Core-4 never bloats from 1000 orbits. Same truth. Independently discovered.
