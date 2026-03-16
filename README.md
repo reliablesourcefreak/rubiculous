@@ -1,48 +1,88 @@
-# Rubiculous Canonical Repo
+# The Rubiculous
 
-This package is a fresh reconstruction from the uploaded source monolith (`rubiculous_v15 (1).html`).
-It is meant to be a stable, local-first base you can keep, version, and re-upload without losing work to session expiry.
+> *"Pain is information. Orbits absorb evolution. Core stays inert."*
 
-## What is in this repo
+---
 
-- `index.html` — original interface, with runtime moved to external scripts
-- `engine/persistence.js` — local/session storage helpers
-- `engine/world.js` — universe/world data and entry persistence helpers
-- `engine/characters.js` — character registry data and registry load/save helpers
-- `engine/search.js` — search overlay/runtime block extracted from the monolith
-- `engine/app.js` — the remainder of the original application script
+This is not a website. This is not a platform. This is not a tool.
 
-## Why this repo exists
+This is an atelier.
 
-The prior download links expired with the temporary execution session. This repo is the durable replacement.
+A working studio open to the sky. Where music gets made, worlds get built, stories get written, characters breathe, plots arc, illustrations accumulate, games get shipped, and anime gets dissected at 2am because something about it mattered.
 
-## How to run locally
+Everything under one roof. Your roof. Your machine. Your rules.
 
-### Option 1: Python
+No algorithm decides what surfaces. No subscription decides what stays. No platform decides what you are. The Rubiculous is a creative OS — not because it runs on an operating system, but because it *is* one. A kernel that never bloats. Orbits that grow, break, get replaced, and grow again. Pain becomes architecture. Resistance becomes fuel.
+
+The workshop is open. The guest room has a light on.
+
+But the building is yours.
+
+---
+
+## What lives here
+
+| Orbit | What it holds |
+|---|---|
+| Worlds | GOA · Fotura · Gyanja · Null Sector · characters · lore · maps |
+| Bazaar | Writing · transmissions · blog · anime commentary |
+| Gallery | Illustrations · collages · visual archive |
+| Radio | Generative music · lofi · jazz · ambient |
+| Sandbox | Relationship maps · project boards · connections |
+| Plot Room | Story arcs · scene structure · codex |
+| Game | Future: indie games built here |
+
+---
+
+## Run it
 
 ```bash
-python3 -m http.server 8000
+cd ~/rubiculous/dev/rubiculous
+python3 -m http.server 8123
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8123`
 
-### Option 2: VS Code Live Server
+---
 
-Open the folder and serve `index.html`.
+## Architecture
 
-## What is still intentionally unfinished
+```
+engine/          ← kernel (never touches content)
+  runtime-kernel.js
+  navigation.js
+  persistence.js
+  registry.js
 
-This package is a **clean canonical base**, not a fabricated "final perfect build".
-The remaining deep kernelization work is still ahead:
+modules/         ← one folder per orbit
+  worlds/
+  radio/
+  gallery/
+  sandbox/
+  plot/
+  ...
 
-1. `sandbox-controller.js` + `sandbox-geometry.js`
-2. `plot-controller.js` + `plot-viewmodel.js`
-3. `worlds-controller.js` + `worlds-viewmodel.js`
-4. `content-controller.js` + `content-viewmodel.js`
-5. `graph-layout.js` + `graph-adapter.js`
-6. `radio-runtime.js`
-7. `editor-controller.js` + `auth-service.js`
+index.html       ← the shell
+```
 
-## Recommended next step
+Verify everything is alive:
+```javascript
+Rubiculous.list() // → 9 modules
+```
 
-Keep this zip locally. Upload this exact repo back into chat when you want the next kernelization pass done.
+---
+
+## Save your work
+
+```bash
+git add -A && git commit -m "what you did"
+```
+
+Escape hatch if something breaks:
+```bash
+git reset --hard HEAD
+```
+
+---
+
+*Built March 2026. Still shipping universes.*
