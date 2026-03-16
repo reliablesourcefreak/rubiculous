@@ -1,0 +1,38 @@
+{
+  "pass": "de-monolith-pass-1",
+  "moved_function_count": 20,
+  "moved": {
+    "content-controller.js": [
+      "renderArchive",
+      "renderArticle",
+      "renderGallery"
+    ],
+    "worlds-controller.js": [
+      "renderWorlds",
+      "openEntryModal",
+      "closeEntryModal",
+      "saveEntry",
+      "deleteEntry"
+    ],
+    "editor-controller.js": [
+      "renderAdmin",
+      "savePost",
+      "deletePost"
+    ],
+    "auth-service.js": [
+      "adminLogin",
+      "adminLogout"
+    ],
+    "sandbox-controller.js": [
+      "renderSandbox",
+      "sbSaveState",
+      "sbLoadState",
+      "sbAddEntity",
+      "sbAddNote"
+    ],
+    "plot-controller.js": [
+      "renderPlotRoom",
+      "renderCodex"
+    ]
+  }
+}

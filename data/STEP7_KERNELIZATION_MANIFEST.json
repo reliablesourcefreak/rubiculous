@@ -1,0 +1,10 @@
+{
+  "step": 7,
+  "name": "admin_editor_kernelization",
+  "added": [
+    "engine/editor-controller.js",
+    "engine/auth-service.js"
+  ],
+  "status": "completed",
+  "remaining_kernelization_steps": []
+}

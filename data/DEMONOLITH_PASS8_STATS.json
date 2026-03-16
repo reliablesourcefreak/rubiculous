@@ -1,0 +1,6 @@
+{
+  "app_js_named_function_count_before": 5,
+  "app_js_named_function_count_after": 1,
+  "functions_removed_this_pass": 4,
+  "final_shell_status": "app.js reduced to init shell only"
+}

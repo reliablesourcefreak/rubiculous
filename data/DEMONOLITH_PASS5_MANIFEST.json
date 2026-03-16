@@ -1,0 +1,32 @@
+{
+  "pass": "gallery_runtime_and_registry_ui_extraction",
+  "source_zip": "rubiculous_radio_extracted.zip",
+  "created_files": [
+    "engine/gallery-runtime.js",
+    "engine/registry-ui.js"
+  ],
+  "updated_files": [
+    "engine/app.js",
+    "index.html"
+  ],
+  "moved_functions": {
+    "engine/gallery-runtime.js": [
+      "setGalleryFilter",
+      "setGalleryTypeFilter",
+      "renderGalleryGrid",
+      "openGalleryLightbox"
+    ],
+    "engine/registry-ui.js": [
+      "switchRegistryTab",
+      "setRegistryFilter",
+      "openProfile",
+      "closeProfile"
+    ]
+  },
+  "remaining_named_functions_in_app_js": 13,
+  "notes": [
+    "This pass combines gallery runtime extraction with registry UI extraction.",
+    "Nested helper functions such as buildCard remained nested inside their extracted parent functions.",
+    "No runtime/browser verification was performed in a live browser here."
+  ]
+}

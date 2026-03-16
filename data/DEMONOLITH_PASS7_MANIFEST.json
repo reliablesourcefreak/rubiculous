@@ -1,0 +1,17 @@
+{
+  "pass": "admin_editor_extraction",
+  "source_zip": "rubiculous_worlds_zoom_extracted.zip",
+  "moved_to_existing_file": "engine/editor-controller.js",
+  "created_files": [],
+  "updated_files": [
+    "engine/app.js",
+    "engine/editor-controller.js"
+  ],
+  "moved_functions": [
+    "renderAdminList",
+    "showEditor",
+    "editPost",
+    "closeEditor"
+  ],
+  "remaining_named_functions_in_app_js": 5
+}

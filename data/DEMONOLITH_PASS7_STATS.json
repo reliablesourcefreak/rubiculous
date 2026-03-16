@@ -1,0 +1,9 @@
+{
+  "remaining_named_functions_in_app_js": 5,
+  "moved_function_count": 4,
+  "used_existing_files": [
+    "engine/editor-controller.js",
+    "engine/auth-service.js"
+  ],
+  "created_new_file": false
+}
