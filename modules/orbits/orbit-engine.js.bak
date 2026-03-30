@@ -1,0 +1,62 @@
+(function () {
+
+  // ✅ Persistent storage key
+  const STORAGE_KEY = "rubiculous_orbits";
+
+  // Load existing orbits from localStorage or start empty
+  let orbitRegistry = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+
+  // Register an orbit and save to localStorage
+  function registerOrbit(name, flow) {
+    orbitRegistry[name] = flow;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(orbitRegistry));
+    console.log("Orbit registered:", name);
+  }
+
+  // Run an orbit with optional delay between steps
+  function runOrbit(name, delay = 1000) {
+    const orbit = orbitRegistry[name];
+
+    if (!orbit) {
+      console.warn("Orbit not found:", name);
+      return;
+    }
+
+    console.log("Running orbit:", name);
+
+    orbit.forEach((step, i) => {
+      setTimeout(() => {
+        const mod = step.module;
+        console.log(`Step ${i + 1}:`, mod);
+
+        try {
+          if (typeof navigate === "function") {
+            navigate(mod);
+          } else {
+            console.warn("No navigation system, fallback");
+            Rubiculous.modules[mod]?.();
+          }
+        } catch (e) {
+          console.error("Orbit step failed:", mod, e);
+        }
+
+      }, i * delay);
+    });
+  }
+
+  // Inspect a saved orbit
+  function inspectOrbit(name) {
+    return orbitRegistry[name];
+  }
+
+  // Expose to Rubiculous system
+  window.Rubiculous = window.Rubiculous || {};
+  Rubiculous.modules = Rubiculous.modules || {};
+  Rubiculous.modules.orbits = {
+    register: registerOrbit,
+    run: runOrbit,
+    inspect: inspectOrbit,
+    list: () => Object.keys(orbitRegistry)
+  };
+
+})();

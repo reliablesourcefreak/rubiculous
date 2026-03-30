@@ -1,0 +1,274 @@
+(function () {
+
+  // ✅ Persistent storage key
+  const STORAGE_KEY = "rubiculous_orbits";
+
+  // Load existing orbits from localStorage or start empty
+  let orbitRegistry = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+
+  // Register an orbit and save to localStorage
+  function registerOrbit(name, flow) {
+    orbitRegistry[name] = flow;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(orbitRegistry));
+    console.log("Orbit registered:", name);
+  }
+
+  // Run an orbit with optional delay between steps
+  function runOrbit(name, delay = 1000) {
+    const orbit = orbitRegistry[name];
+
+    if (!orbit) {
+      console.warn("Orbit not found:", name);
+      return;
+    }
+
+    console.log("Running orbit:", name);
+
+    orbit.forEach((step, i) => {
+      setTimeout(() => {
+        const mod = step.module;
+        console.log(`Step ${i + 1}:`, mod);
+
+        try {
+          if (typeof navigate === "function") {
+            navigate(mod);
+          } else {
+            console.warn("No navigation system, fallback");
+            Rubiculous.modules[mod]?.();
+          }
+        } catch (e) {
+          console.error("Orbit step failed:", mod, e);
+        }
+
+      }, i * delay);
+    });
+  }
+
+  // Inspect a saved orbit
+  function inspectOrbit(name) {
+    return orbitRegistry[name];
+  }
+
+  // Expose to Rubiculous system
+  window.Rubiculous = window.Rubiculous || {};
+  Rubiculous.modules = Rubiculous.modules || {};
+  Rubiculous.modules.orbits = {
+    register: registerOrbit,
+    run: runOrbit,
+    inspect: inspectOrbit,
+    list: () => Object.keys(orbitRegistry)
+  };
+
+// 🔹 Orbit Visual Hook
+
+let orbitLog = document.getElementById("orbit-log");
+
+if (!orbitLog) {
+
+  orbitLog = document.createElement("div");
+
+  orbitLog.id = "orbit-log";
+
+  orbitLog.style.position = "fixed";
+
+  orbitLog.style.bottom = "20px";
+
+  orbitLog.style.right = "20px";
+
+  orbitLog.style.background = "rgba(0,0,0,0.7)";
+
+  orbitLog.style.color = "#FFD700";
+
+  orbitLog.style.padding = "10px";
+
+  orbitLog.style.fontFamily = "monospace";
+
+  orbitLog.style.fontSize = "14px";
+
+  orbitLog.style.borderRadius = "6px";
+
+  orbitLog.style.maxWidth = "250px";
+
+  orbitLog.style.zIndex = "9999";
+
+  document.body.appendChild(orbitLog);
+
+}
+
+function logOrbitStep(text) {
+
+  const p = document.createElement("div");
+
+  p.textContent = text;
+
+  orbitLog.appendChild(p);
+
+}
+
+const originalRunOrbit = Rubiculous.modules.orbits.run;
+
+Rubiculous.modules.orbits.run = function(name, delay = 1000) {
+
+  const orbit = orbitRegistry[name];
+
+  if (!orbit) return originalRunOrbit(name, delay);
+
+  logOrbitStep("Orbit started: " + name);
+
+  orbit.forEach((step, i) => {
+
+    setTimeout(() => {
+
+      logOrbitStep("Step " + (i+1) + ": " + step.module);
+
+    }, i * delay);
+
+  });
+
+  return originalRunOrbit(name, delay);
+
+};
+// 🔹 Default Explore Orbit (auto-injected)
+
+(function initDefaultOrbit() {
+
+  if (!orbitRegistry["explore"]) {
+
+    const defaultFlow = [
+
+      { module: "worlds" },
+
+      { module: "characters" },
+
+      { module: "archive" },
+
+      { module: "sandbox" },
+
+      { module: "plot" },
+
+      { module: "article" },
+
+      { module: "radio" },
+
+      { module: "auth" },
+
+      { module: "admin" },
+
+      { module: "home" },
+
+      { module: "gallery" },
+
+      { module: "orbits" }
+
+    ];
+
+
+
+    orbitRegistry["explore"] = defaultFlow;
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(orbitRegistry));
+
+    console.log("[Default Orbit Injected] explore");
+
+  }
+
+// 🔹 Orbit → Navigation Bridge (auto-injected)
+
+(function bridgeOrbitToNavigation() {
+
+  const originalRun = Rubiculous.modules.orbits.run;
+
+
+
+  Rubiculous.modules.orbits.run = function(name, delay = 1000) {
+
+    const orbit = orbitRegistry[name];
+
+    if (!orbit) return originalRun(name, delay);
+
+
+
+    orbit.forEach((step, i) => {
+
+      setTimeout(() => {
+
+        const mod = step.module;
+
+
+
+        try {
+
+          if (typeof navigate === "function") { navigate(mod); return; }
+
+          if (Rubiculous.modules.navigation?.navigate) { Rubiculous.modules.navigation.navigate(mod); return; }
+
+          if (typeof Rubiculous.modules[mod] === "function") { Rubiculous.modules[mod](); return; }
+
+          if (typeof renderHome === "function") { renderHome(); }
+
+        } catch (e) {
+
+          console.error("[Orbit Navigation Error]", mod, e);
+
+        }
+
+
+
+      }, i * delay);
+
+    });
+
+  };
+
+})();
+})();
+// 🔹 Orbit → Navigation Bridge (auto-injected)
+
+(function bridgeOrbitToNavigation() {
+
+  const originalRun = Rubiculous.modules.orbits.run;
+
+
+
+  Rubiculous.modules.orbits.run = function(name, delay = 1000) {
+
+    const orbit = orbitRegistry[name];
+
+    if (!orbit) return originalRun(name, delay);
+
+
+
+    orbit.forEach((step, i) => {
+
+      setTimeout(() => {
+
+        const mod = step.module;
+
+
+
+        try {
+
+          if (typeof navigate === "function") { navigate(mod); return; }
+
+          if (Rubiculous.modules.navigation?.navigate) { Rubiculous.modules.navigation.navigate(mod); return; }
+
+          if (typeof Rubiculous.modules[mod] === "function") { Rubiculous.modules[mod](); return; }
+
+          if (typeof renderHome === "function") { renderHome(); }
+
+        } catch (e) {
+
+          console.error("[Orbit Navigation Error]", mod, e);
+
+        }
+
+
+
+      }, i * delay);
+
+    });
+
+  };
+
+})();
+})();
