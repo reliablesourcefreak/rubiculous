@@ -63,6 +63,7 @@ const WORLDS_DATA = [
     bumpers: ['CHROME','SIGNAL','CONTROL','POWER','VOID'],
     characters: [],
   },
+  { id: 'goa', name: 'GOA', subtitle: 'The Planet', planet: 'ex-nihilo', layer: 1, tagline: 'A terraformed world in deep time.', status: 'Active', locked: false, color: '#8b5cf6', glow: '#a78bfa', bumpers: ['ORACLE','REBEL','SIGNAL','VOID','CHROME'], characters: [] },
   { id: 'null-sector', name: 'NULL SECTOR', subtitle: '—', planet: 'goa', layer: 2, tagline: 'Under construction.', status: 'Dormant', locked: true, color: '#c0392b', glow: '#ff4444', bumpers: [], characters: [] },
   { id: 'deep-archive', name: 'DEEP ARCHIVE', subtitle: '—', planet: 'goa', layer: 2, tagline: 'Under construction.', status: 'Unknown', locked: true, color: '#7f8c8d', glow: '#aabbcc', bumpers: [], characters: [] },
 ];
