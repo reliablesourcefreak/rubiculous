@@ -94,14 +94,19 @@ Born from suffering with Claude HTML dumps and rate limits.
 
 ---
 
-## CURRENT STATUS (March 2026)
+## CURRENT STATUS (April 2026)
 
 ✅ Kernel wired and booting  
-✅ Homepage hero — stunning (dark, Rubiculous cube, "Where worlds are built")  
-✅ Navigation — Home, Bazaar, Worlds, Gallery, Informatics  
-✅ NEURAL_LOFI_STATION radio widget  
-✅ Script load order fixed yesterday  
-⏳ Continue building from here — ask me what's next  
+✅ De-monolith complete — index.html no longer a 6640 line monolith  
+✅ Modular architecture — engine/ and modules/ folders properly separated  
+✅ Worlds module — modules/worlds/ with world.js, worlds-controller.js, worlds-viewmodel.js  
+✅ Data layer working — localStorage per world using rub_entries_{worldId} pattern  
+✅ Entry form working — save, edit, delete entries per world  
+✅ GOA added as selectable world (April 2026)  
+✅ Deployed live at reliablesourcefreak.github.io/rubiculous  
+✅ Git workflow established — branch: smoke-fixes  
+⏳ Add real content — Yohan Maurie / Oracle and Rebel story in GOA  
+⏳ CLAUDE_BOOT needs updating after each major session  
 
 ---
 
